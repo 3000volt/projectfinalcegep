@@ -1,0 +1,72 @@
+﻿@model testactualisation.Appdata.AnalyseCompétence
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AnalyseCompétence</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Obligatoire)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Obligatoire)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NiveauTaxonomique)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NiveauTaxonomique)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Reformulation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Reformulation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Context)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Context)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SavoirFaireProgramme)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SavoirFaireProgramme)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SavoirEtreProgramme)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SavoirEtreProgramme)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValidationApprouve)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValidationApprouve)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AdresseCourrielNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdresseCourrielNavigation.AdresseCourriel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CodeCompetenceNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CodeCompetenceNavigation.CodeCompetence)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdAnalyseAc">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

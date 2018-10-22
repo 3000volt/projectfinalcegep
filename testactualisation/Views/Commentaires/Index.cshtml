@@ -1,0 +1,47 @@
+﻿@model IEnumerable<testactualisation.Appdata.Commentaires>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TexteCom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categorie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdresseCourrielNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TexteCom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categorie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdresseCourrielNavigation.AdresseCourriel)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.NumCom">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.NumCom">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.NumCom">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
