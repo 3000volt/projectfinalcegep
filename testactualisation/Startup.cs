@@ -15,9 +15,9 @@ namespace testactualisation
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration config)
         {
-            Configuration = configuration;
+            Configuration = config;
         }
 
         public IConfiguration Configuration { get; }
